@@ -1,0 +1,38 @@
+obfuslate, an inflate implementation that decodes GZIP files
+
+The goal of this project (apart from shits and giggles) is to write
+the shortest, most incomprehensible code as possible to decode a valid
+GZIP file. Contributions are welcome.
+
+Each file should be named N-A.c, where N is the number of characters in
+the file and A is your Github alias.
+
+A small script is provided to test each binary against a number of
+artificial, pseudo-real and real compressed texts from the Repetitive
+Corpus (see references).
+
+Implementation notes.
+
+Supports all three block types; no compression, fixed and dynamic Huffman codes.
+
+Skips ID1 and ID2 check.
+
+Assumes CM == 8 (deflate).
+
+Skips FHCRC, FEXTRA, FNAME and FCOMMENT (if they exist).
+
+Skips the final CRC32 check.
+
+References.
+
+DEFLATE Compressed Data Format Specification version 1.3
+http://www.ietf.org/rfc/rfc1951.txt
+
+GZIP file format specification version 4.3
+http://www.ietf.org/rfc/rfc1952.txt
+
+An Explanation of the Deflate Algorithm
+http://zlib.net/feldspar.html
+
+Repetitive Corpus
+http://pizzachili.dcc.uchile.cl/repcorpus.html
