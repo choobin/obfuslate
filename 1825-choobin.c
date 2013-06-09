@@ -8,7 +8,7 @@ char w[37268];
 #define F(n) {x(g<n){p=getchar();b|=(p<<g);g+=8;}}
 #define L(n) {b>>=n;g-=n;}
 #define A(n) ({F(n);j=b&((1<<n)-1);L(n);j;})
-#define T(n) {p=n;x(p>0){q=(n>8)?8:n;F(q);L(q);p-=q;}}
+#define T(n) {r=n;x(r>0){q=(r>8)?8:r;F(q);L(q);r-=q;}}
 #define E(h,l,n) {m[1]=0;for(r=0;r<16;r++)h.t[r]=0;for(r=0;r<(n);r++)h.t[(l)[r]]++;for(r=2;r<16;r++)m[r]=m[r-1]+h.t[r-1];for(r=0;r<n;r++)if((l)[r]>0)h.s[m[(l)[r]]++]=r;}
 #define R(h) ({p=q=r=0;x(1){r++;p=(p<<1)|A(1);if(p<h.t[r])break;q+=h.t[r];p-=h.t[r];}h.s[q+p];})
 void D(int l,int d){q=0;if(a<d)q+=37268;q+=a-d;for(r=0;r<l;r++){w[a]=w[q];a++;q++;if(a==37268){I();D(l-(r+1),d);return;}if(q==37268)q=0;}}
