@@ -8,8 +8,6 @@ btypes="00 01 10"
 
 workdir="t"
 
-mkdir $workdir 2> /dev/null
-
 input="pkdpg.txt"
 
 suffix="gz"
@@ -20,7 +18,7 @@ do
 
     gz=$file.$suffix
 
-    echo "Testing BTYPE=$btype"
+    echo "Testing BTYPE=$btype."
 
     echo "Decompressing (zcat)."
     zcat $workdir/$gz > $workdir/$file
