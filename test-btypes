@@ -27,7 +27,7 @@ do
     ./$bin < $workdir/$gz > $workdir/output
 
     echo "Comparing output."
-    cmp $workdir/$input $workdir/output 2> /dev/null
+    cmp $workdir/$file $workdir/output 2> /dev/null
 
     if [ "$?" == 0 ]; then
         echo -e "\033[1m[PASSED]\033[0m"
