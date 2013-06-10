@@ -1,0 +1,41 @@
+#! /bin/bash
+
+[[ ! -x $1 ]] && echo "usage: OBFUSLATE-BINARY" && exit
+
+bin=$1
+
+btypes="00 01 10"
+
+workdir="t"
+
+mkdir $workdir 2> /dev/null
+
+input="pkdpg.txt"
+
+suffix="gz"
+
+for btype in $btypes
+do
+    file=$input.btype$btype
+
+    gz=$file.$suffix
+
+    echo "Testing BTYPE=$btype"
+
+    echo "Decompressing (zcat)."
+    zcat $workdir/$gz > $workdir/$file
+
+    echo "Decompressing (obfuslate)."
+    ./$bin < $workdir/$gz > $workdir/output
+
+    echo "Comparing output."
+    cmp $workdir/$input $workdir/output 2> /dev/null
+
+    if [ "$?" == 0 ]; then
+        echo -e "\033[1m[PASSED]\033[0m"
+    else
+        echo -e "\033[1;31m[FAILED] -- \$? = $?\033[0m"
+    fi
+
+    echo
+done
