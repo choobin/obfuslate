@@ -1,25 +1,18 @@
-obfuslate, an inflate implementation that decodes GZIP files
+obfuslate, a gzip decoder.
 
-The goal of this project (apart from shits and giggles) is to write
-the shortest, most incomprehensible code as possible to decode a GZIP
-file. Contributions are welcome.
+A short, almost incomprehensible implementation of inflate capable of decoding gzip files.
 
-Each file should be named N-A.c, where N is the number of characters in
-the file and A is your Github alias.
+Contributions are welcome. Each file should be named N-A.c, where N is the number of characters in the file and A is your Github alias.
 
-A small script is provided to test each binary against a number of
-artificial, pseudo-real and real compressed texts from the Repetitive
-Corpus (see references).
+A small script is provided to test each binary against a number of artificial, pseudo-real and real compressed texts from the Repetitive Corpus (see references).
 
-A second script is provided to explicitly test decoding of each
-DEFLATE block type.
+A second script is provided to explicitly test decoding of each DEFLATE block type.
 
 Implementation notes.
 
-The larger file supports all three block types; no compression, fixed
-and dynamic Huffman codes.
+The larger file supports all three DEFLATE block types; no compression, fixed and dynamic Huffman code tables.
 
-The smaller file supports dynamic Huffman codes only.
+The smaller file supports dynamic Huffman code tables only.
 
 Skips ID1 and ID2 check.
 
