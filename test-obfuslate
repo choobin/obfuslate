@@ -29,7 +29,7 @@ do
 
     gz=$file.$suffix
 
-    echo "$path"
+    echo "Testing $path."
 
     echo "Downloading."
     wget -q -P $workdir -c $url/$path.$suffix
