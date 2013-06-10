@@ -21,8 +21,6 @@ real/world_leaders"
 
 workdir="t"
 
-mkdir $workdir 2> /dev/null
-
 for path in $paths
 do
     file=$(basename $path)
