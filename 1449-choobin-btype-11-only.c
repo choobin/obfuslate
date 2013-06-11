@@ -7,7 +7,7 @@ struct{int s[288];int t[16];}u,v;
 #define F(n)w(g<n){p=getchar();b|=(p<<g);g+=8;}
 #define L(n)b>>=n;g-=n;
 #define A(n)({F(n);j=b&((1<<n)-1);L(n);j;})
-#define T(n){k=n;w(k>0){q=(k>8)?8:k;F(q);L(q);k-=q;}}
+#define T(n){k=n;w(k>0){A(8);k-=8;}}
 #define E(h,l,n)k=0;w(k<16)h.t[k++]=0;k=0;w(k<n)h.t[(l)[k++]]++;m[1]=0;k=2;w(k<16){m[k]=m[k-1]+h.t[k-1];k++;}k=0;w(k<n){if((l)[k]>0)h.s[m[(l)[k]]++]=k;k++;}
 #define R(h)({p=q=k=0;w(1){k++;p=(p<<1)|A(1);if(p<h.t[k])break;q+=h.t[k];p-=h.t[k];}h.s[q+p];})
 void D(int l,int d){q=0;if(a<d)q+=37268;q+=a-d;k=0;w(k<l){r[a]=r[q];a++;q++;if(a==37268){I();D(l-(k+1),d);return;}if(q==37268)q=0;k++;}}
