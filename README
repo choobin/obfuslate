@@ -22,6 +22,8 @@ Skips FHCRC, FEXTRA, FNAME and FCOMMENT (if they exist).
 
 Skips the final CRC32 check.
 
+Requires a compiler that supports statement expressions.
+
 References.
 
 DEFLATE Compressed Data Format Specification version 1.3
