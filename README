@@ -1,6 +1,6 @@
 obfuslate, a gzip decoder.
 
-A short, almost incomprehensible implementation of inflate capable of decoding gzip files.
+A short almost incomprehensible implementation of inflate capable of decoding gzip files.
 
 Contributions are welcome. Each file should be named N-A.c, where N is the number of characters in the file and A is your Github alias.
 
