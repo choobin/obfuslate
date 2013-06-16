@@ -1,4 +1,4 @@
-obfuslate, a gzip tiny decoder.
+obfuslate, a tiny gzip decoder.
 
 A short almost incomprehensible implementation of inflate capable of decoding gzip files.
 
