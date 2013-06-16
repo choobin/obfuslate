@@ -4,9 +4,9 @@ A short almost incomprehensible implementation of inflate capable of decoding gz
 
 Contributions are welcome. Each file should be named N-A.c, where N is the number of characters in the file and A is your Github alias.
 
-Two test scripts are provided. `test-obfuslate` is used to test a binary against a number of artificial, pseudo-real and real compressed texts from the Repetitive Corpus (see references).
+Two test scripts are provided. test-obfuslate is used to test a binary against a number of artificial, pseudo-real and real compressed texts from the Repetitive Corpus (see references).
 
-`test-btypes` tests decoding of each DEFLATE block type using specially formatted archives.
+test-btypes tests decoding of each DEFLATE block type using specially formatted archives.
 
 Implementation notes.
 
