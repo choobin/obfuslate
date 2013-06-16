@@ -1,18 +1,19 @@
+workdir=$(dirname $0)
+
 check() {
     bin=$1
-
     output=$2
 
     input="${output}.gz"
 
     echo "Decompressing (zcat)."
-    zcat $input > $output
+    zcat $workdir/$input > $workdir/$output
 
     echo "Decompressing (obfuslate)."
-    ./$bin < $input > output
+    ./$bin < $workdir/$input > $workdir/output
 
     echo "Comparing output."
-    cmp $output output 2> /dev/null
+    cmp $workdir/$output $workdir/output 2> /dev/null
 
     if [ "$?" == 0 ]; then
         echo -e "\033[1m[PASSED]\033[0m"
@@ -25,9 +26,8 @@ check() {
 
 fetch() {
     url=$1
-
     text=$2
 
     echo "Downloading $text."
-    wget -q -c "${url}/${text}.gz"
+    wget -q -P $workdir -c "${url}/${text}.gz"
 }

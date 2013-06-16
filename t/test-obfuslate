@@ -1,5 +1,5 @@
 #! /bin/bash
-. test-shared
+. $(dirname $0)/test-shared || exit
 
 [[ ! -x $1 ]] && echo "usage: OBFUSLATE-BINARY" && exit
 
@@ -24,7 +24,7 @@ do
 
     echo "Testing $text."
 
-    [[ ! -f "${file}.gz" ]] && fetch $url $text
+    [[ ! -f "$workdir/${file}.gz" ]] && fetch $url $text
 
     check $bin $file
 done
