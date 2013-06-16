@@ -1,0 +1,15 @@
+#! /bin/bash
+. test-shared
+
+[[ ! -x $1 ]] && echo "usage: OBFUSLATE-BINARY" && exit
+
+bin=$1
+
+src="pkdpg.txt"
+
+for btype in "00" "01" "10"
+do
+    echo "Testing BTYPE=${btype}"
+
+    check $bin "${src}.btype${btype}"
+done
