@@ -1,12 +1,12 @@
-obfuslate, a gzip decoder.
+obfuslate, a gzip tiny decoder.
 
 A short almost incomprehensible implementation of inflate capable of decoding gzip files.
 
 Contributions are welcome. Each file should be named N-A.c, where N is the number of characters in the file and A is your Github alias.
 
-A small script is provided to test each binary against a number of artificial, pseudo-real and real compressed texts from the Repetitive Corpus (see references).
+Two test scripts are provided. `test-obfuslate` is used to test a binary against a number of artificial, pseudo-real and real compressed texts from the Repetitive Corpus (see references).
 
-A second script is provided to explicitly test decoding of each DEFLATE block type.
+`test-btypes` tests decoding of each DEFLATE block type using specially formatted archives.
 
 Implementation notes.
 
