@@ -15,10 +15,10 @@ check() {
     echo "Comparing output."
     cmp $workdir/$output $workdir/output 2> /dev/null
 
-    if [ "$?" == 0 ]; then
+    if [ $? == 0 ]; then
         echo -e "\033[1m[PASSED]\033[0m"
     else
-        echo -e "\033[1;31m[FAILED] -- \$? = $?\033[0m"
+        echo -e "\033[1;31m[FAILED] \$? = $?\033[0m"
     fi
 
     echo
@@ -30,4 +30,9 @@ fetch() {
 
     echo "Downloading $text."
     wget -q -P $workdir -c "${url}/${text}.gz"
+
+    if [ $? != 0 ]; then
+        echo -e "\033[1;31m[ERROR]\033[0m Failed to download ${url}/${text}.gz"
+        exit 1
+    fi
 }
