@@ -3,7 +3,7 @@ int a,b,c,d,e,f,g,h,i,j,k,l,m,n[16],o[320],p[37268];struct{int q[288];int r[16];
 #define I while
 #define N j=0;I(j<a)putchar(p[j++]);a=0;
 #define F(n)p[a++]=n;if(a==37268){N}
-#define L(n)({I(g<n){j=getchar();b|=j<<g;g+=8;}j=b&((1<<n)-1);b>>=n;g-=n;j;})
+#define L(n)({int z;I(g<n){z=getchar();b|=z<<g;g+=8;}z=b&((1<<n)-1);b>>=n;g-=n;z;})
 #define A(n)({j=c=k=0;I(1){k++;j=j<<1|L(1);if(j<n.r[k])break;c+=n.r[k];j-=n.r[k];}n.q[c+j];})
 #define T(h,l,m)k=0;I(k<16)k++[h.r]=0;k=0;I(k<m)h.r[k++[(l)]]++;n[1]=0;k=2;I(k<16){n[k]=n[k-1]+h.r[k-1];k++;}k=0;I(k<m){if(k[(l)]>0)h.q[n[k[(l)]]++]=k;k++;}
         E(int l,int d){c=0;if(a<d)c+=37268;c+=a-d;k=0;I(k<l){p[a++]=p[c++];if(a==37268){N;E(l-k-1,d);return;}if(c==37268)c=0;k++;}}
