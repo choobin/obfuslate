@@ -13,7 +13,7 @@ _(int l,int d){c=0;if(a<d)c+=37268;c+=a-d;k=0;I(k<l){p[a++]=p[c++];if(a==37268)
 h&4)L((L(8)|L(8)<<8));if(h&8)I(L(8));if(h&16)I(L(8));if(h&2)L(16);I(!f){f=L(1);
 l=L(2);if(l==0){m=g%8;if(m>0){b>>=m;g-=m;}i=L(8)|L(8)<<8;L(16);I(i-->0){F(L(8))
 }continue;}if(l==1){h=0;I(h<144)o[h++]=8;I(h<256)o[h++]=9;I(h<280)o[h++]=7;I(h<
-288)o[h++]=8;E(s,o,288)}if(l==2){e=L(5)+257;d=L(5)+1;k=L(4)+4;bzero(o,76);i=0;I
+288)o[h++]=8;E(s,o,288)}if(l==2){e=L(5)+257;d=L(5)+1;k=L(4)+4;i=0;I(i<76)o[i++]=0;i=0;I
 (i<k)o[i++["qrsaihjgkflemdncobp"]-97]=L(3);E(s,o,19)i=0;I(i<e+d){h=A(s);k=3;m=2
 ;c=0;if(h<16){o[i++]=h;continue;}if(h==16)c=o[i-1];if(h==17)m++;if(h>17){k=11;m
 =7;}k+=L(m);j=0;I(j++<k)o[i++]=c;}E(s,o,e)E(t,o+e,d)}I(1){h=A(s);if(h<256){F(h)
