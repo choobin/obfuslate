@@ -19,5 +19,5 @@ if(h==17)m++;if(h>17){b=11;m=7;}b+=L(m);d=0;I(d++<b)o[i++]=c;}E(s,o,p)E(t,o+p,
 j)}I(1){h=A(s);if(h<256){F(h)continue;}if(h==256)break;h-=257;if(h<9)p=h+3;el\
 se if(h==28)p=258;else{i=1;d=13;I(h>=d){d+=4;i++;}p=(1<<(i-1))*10+3+(h-d+4)*(1
 <<i);}m=0;if(h>7&&h<28)m=(h-4)/4;if(m>0)p+=L(m);if(l==1)h=((L(5)<<3)*86236206\
-10ULL&1136090292240ULL)%1023;else{h=A(t);}m=0; if(h<4)j=h+1;else{m=(h>>1)-1;j=
-(1<<(m+1))+1+((h&1)<<m);}if(m>0)j+=L(m);_(p,j);}}N}
+10ULL&1136090292240ULL)%1023;else{h=A(t);}m=0;if(h<4)j=h+1;else{m=(h>>1)-1;j=(
+1<<(m+1))+1+((h&1)<<m);}if(m>0)j+=L(m);_(p,j);}}N}
