@@ -24,7 +24,7 @@ gcc version 4.8.1 x86_64-unknown-linux-gnu
 gcc version 4.7.2 x86_64-unknown-linux-gnu
 icc version 12.1.3 (gcc version 4.6.0 compatibility)
 pgcc 12.10-0 64-bit target on x86-64 Linux -tp sandybridge
-clang version 3.3 (tags/RELEASE_33/final) x86_64-unknown-linux-gnu (-Wno-return-type)
+clang version 3.3 (tags/RELEASE_33/final) x86_64-unknown-linux-gnu
 tcc version 0.9.26 (x86-64 Linux)
 
 gcc version 4.3.1 sparc-sun-solaris2.10
